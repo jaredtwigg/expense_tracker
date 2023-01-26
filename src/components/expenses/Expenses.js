@@ -6,7 +6,7 @@ import Card from "../UI/Card";
 import "./Expenses.css";
 
 const Expenses = (props) => {
-  const [filterYear, setFilterYear] = useState("2023");
+  const [filterYear, setFilterYear] = useState("all");
 
   const filterChangeHandler = (selectedfilter) => {
     setFilterYear(selectedfilter);
@@ -26,7 +26,7 @@ const Expenses = (props) => {
           onFilterChange={filterChangeHandler}
         />
         <ExpensesChart expenses={filteredExpenses} />
-        <ExpensesList items={filteredExpenses} />
+        <ExpensesList items={filteredExpenses} onDelete={() => props.onDelete(props.id)}/>
       </Card>
     </div>
   );
