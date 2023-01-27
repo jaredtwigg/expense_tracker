@@ -38,6 +38,18 @@
   .expense-item__delete {
     color: #fff;
     cursor: pointer;
+    background-color: #2a2a2a;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px #fff solid;
+    text-align: center;
+  }
+
+  .expense-item__delete:hover {
+    color: #000;
+    border-color: #2a2a2a;
+    background-color: #8d8d8d;
   }
   
   @media (min-width: 580px) {

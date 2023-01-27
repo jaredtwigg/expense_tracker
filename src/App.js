@@ -39,15 +39,14 @@ const App = () => {
   }
 
   const handleDelete = (itemId) => {
-    console.log(itemId);
-    setExpenses(expenses.filter(expense => expense.id !== itemId));
+    setExpenses(expenses.filter(expense => expense.id !== itemId[0].id));
     console.log("AFTER", expenses);
   }
 
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses item={expenses} onDelete={handleDelete}/>
+      <Expenses item={expenses} onDelete={handleDelete} />
     </div>
   );
 }
