@@ -14,7 +14,7 @@ const ExpensesList = (props) => {
         date={expense.date}
         key={expense.id}
         id={expense.id}
-        onDelete={() => {console.log("HERE", expense.id); props.onDelete(expense.id)}}
+        onDelete={() => {props.onDelete(expense.id)}}
       />))}
   </ul>
 };
