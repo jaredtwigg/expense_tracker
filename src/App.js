@@ -29,7 +29,7 @@ const TEST_EXPENSES = [
   },
 ];
 
-const App = () => {
+const App = (props) => {
   const [expenses, setExpenses] = useState([]);
 
   const addExpenseHandler = (expenseData) => {
@@ -39,7 +39,8 @@ const App = () => {
   }
 
   const handleDelete = (itemId) => {
-    setExpenses(expenses.filter(expense => expense.id !== itemId[0].id));
+    console.log(itemId);
+    setExpenses(expenses.filter(expense => expense.id !== itemId));
     console.log("AFTER", expenses);
   }
 
